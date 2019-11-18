@@ -11,7 +11,7 @@ export const initComments = comments => {
   }
 }
 
-export const addComments = comment => {
+export const addComment = comment => {
   return {
     type: ADD_COMMENT,
     comment,

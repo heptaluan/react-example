@@ -1,13 +1,13 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 
 class Comment extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = { timeString: '' }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this._updateTimeString()
     this._timer = setInterval(
       this._updateTimeString.bind(this),
@@ -21,7 +21,7 @@ class Comment extends Component {
 
   _updateTimeString() {
     const comment = this.props.comment
-    const duration = (+Date.now() - comment.createdTime) / 1000
+    const duration = (+Date.now() - comment.createTime) / 1000
     this.setState({
       timeString: duration > 60
         ? `${Math.round(duration / 60)} 分钟前`

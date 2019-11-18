@@ -8,17 +8,21 @@ import { addComment } from '../reducers/Comments'
 class CommentInputContainer extends Component {
   constructor() {
     super()
-    this.state = { username: '' }
+    this.state = {
+      username: ''
+    }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this._loadUsername()
   }
 
   _loadUsername() {
     const username = localStorage.getItem('username')
     if (username) {
-      this.setState({ username })
+      this.setState({
+        username,
+      })
     }
   }
 

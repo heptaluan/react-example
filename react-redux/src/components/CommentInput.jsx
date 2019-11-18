@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 export default class CommentInput extends Component {
-  static defaultProps = {
-    username: ''
-  }
 
   constructor(props) {
     super(props)
@@ -40,7 +37,7 @@ export default class CommentInput extends Component {
       this.props.onSubmit({
         username: this.state.username,
         content: this.state.content,
-        createdTime: +new Date()
+        createTime: +new Date()
       })
     }
     this.setState({
