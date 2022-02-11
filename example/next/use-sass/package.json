@@ -10,7 +10,7 @@
     "@zeit/next-sass": "^1.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "latest",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
